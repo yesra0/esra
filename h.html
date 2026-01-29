@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Café Aroma | Menü</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f4f1ee;
+            color: #333;
+        }
+
+        header {
+            background-color: #3e2723;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        .menu-section {
+            margin-bottom: 60px;
+        }
+
+        .menu-section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-left: 6px solid #3e2723;
+            padding-left: 15px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .menu-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .menu-card-content {
+            padding: 20px;
+        }
+
+        .menu-card-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .menu-card-content span {
+            font-weight: 600;
+            color: #3e2723;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background-color: #3e2723;
+            color: white;
+            text-align: center;
+            padding: 25px 0;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Café Aroma</h1>
+    <p>Kaliteli kahve, keyifli anlar ☕</p>
+</header>
+
+<div class="container">
+
+    <!-- Kahveler -->
+    <div class="menu-section">
+        <h2>☕ Kahveler</h2>
+        <div class="menu-grid">
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a" alt="Espresso">
+                <div class="menu-card-content">
+                    <h3>Espresso</h3>
+                    <span>987₺</span>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Americano">
+                <div class="menu-card-content">
+                    <h3>Americano</h3>
+                    <span>435₺</span>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSEhMVFRUVFRUQFRAVFQ8QFRUVFRUWFhUVFhUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFxAQGSsfHh0tLS0tLS0tLS0tLS0tLS0tLS0tLSstKy0tLSstLS0tLS0tLSstLS0tLS0tLS0tLTctLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAQMEBQYCBwj/xABAEAABAwIEAwUFBQUHBQAAAAABAAIDBBEFITFBElFxBiJhgZETMkKhsQczUnLRFGKSsvAVFiNTgsHhF3OiwvH/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAAkEQEBAAICAgIDAAMBAAAAAAAAAQIRAzESIRNBIlFhFDJxBP/aAAwDAQACEQMRAD8AtBCN080cgno4gE50Cxb7RREdynLAJ9sfNcyEBANtBKd4ANUyHldCMnVIFksVBmwwO2VhwgLppQNstiPZhjh7oWHxzsuY7lg8l7HI4bqqrYA/ZPdg8Zk8LkjINiFwvSsZ7NNcCQLFYyvwKRh0uFpM5WWXHYqELp7CMiuVaAhCEEEIQgBIhKgBIlQgESoSIBUIQgBCEiDCEqEE+ioWiyd6JqJthmlMwCxdBXNTL2J0PulDUgZa1PNYnA1FkG5LQm3A7J2yQoJFewrhsdlM4Evswlo9q+aK6hVGFhw0VvI1NEFLSpXnmP8AZgG5aM1jK7DXxnML2+enB1VJieBteDkqmVicsJXjyFqsY7MOZct9FmZoS02IWsylYZY2G0IQqSRKhCAEJEqAEiVIgFQhCAEiEqAEJLpUB9Fht0NgXEBUnjWMdBpzVyxOnNKI0aDniQ1112WrloRoHA1cusuXkrgIodcSUBJxJQ5IELU25qfDUjiE9BH9muHsATsj0yWEpGgVdKH7Khr+zDH/AArV8AC4klACSu3kWO9nTFct05LOkL1zHS1wIXnmIYdmSFWPJOqjPhvcUyRPPp3DZNELVhZoISITIISoQCISoQCIQhACEIQH0XDHdPcCagengFlG9dJCV2GrlzwgiWRcLnMpxkKDNHNK2FSOABIXo0NmHRri9k6c0nAgbMPeUjc9U84JoxlI9lcQEy+Xku3U5SNiskDDmFQ6xwAUmuq+ALKVmJF5tss88tNuPHaPiU/ETZVjKck6K0ip7q0o6Acljhu1vlqRVxYI0jMKjxfs0b3YF6C2nOifbRDddOO45M9V4pVYbIzVp6qFZe2YjhbHNOQXn2N9mnBxLB5LWZ/tjcP0yiE9PTOYbOBCaVoCEiLoIFCEIAQhCA+jWABdmZKIUOjWPtu5EhKfZEo17LsPKco0lZBcGVMcRTrSEDRcyl4QEhkUbEayOBhkmeGNHPU9Agkm/JRqyrjiHFK9rB4kBedY/wDaM992UreBuntDm49BsqSh7P1dY7jcXH995PySuUnZzG5dN5W9v6Nnul0h/dGXqVUy/aYTlFTk9T+ik4V9n8LLGUl55aBXjaKnhFmxtHkFleaTptjw77ZY9sq9/u04Hk4pmTtJiP8Alt9D+q1vtQ8hrBrsnDgRcCS63gFM5OTLqLvHx491i29p6r44mu8iFOou0MbjaWC3iFd4d2bL7l3RR63AxG6xGXNTcs9bsVMcN6lTKaCnkzYeHwU6KmAyBBVBLG1guFFo8QcH91xSx5v3Dy4d9VqnvDdVGlrOSs6YtlbZ4294KpxHDjEb6tO66JlL05rjcfVcAFy6dSttmm21YATElXdMoqMcwdjwclha7ApGk2FwvVYabi1Tz8PbbMJzKwXGV4dJEWmxFlwvTO0WBMeDYZrBVuFPYcxktJlKxywsQEIIQqQEIQgPpQypA0ldtYEjpFm2AjCHWXBuU9HDzQEe10vsypnAAuRmQ3mbJaPaFiNdHSwOqJtB7rd3O2AXjOLYnUYjPc3NzZkYvwtHTmtD9qeLmWpFO09yIAW5uO6vexmBtp4hI4AyPFxf4R+qjPPxi+PDyqBgXY1sIDpAHP1sdAtWy7QLWy20Cl08ReT6k8lJqKJgFh3nHO50C5vHLL8tujyxx/FUS1ZAUKdvEc1pIsF7vzzVdV0oBy6dErhlO1Y542+ndDhjO6+IgPAsQd1YRSAGzxY8tvJRoIQxtntPg9lyolU4fA/iG4Oq6JbjHPZ5VeOlawWaLnkFTYnd4Itd5ya0Z28SURy3PeOWmtgreBmXdDWjnqVe/OaRrwu2Mlw8m7Hba7pqLBg03C1ldA3Mt+EXJ5nks5W127T5Lkzw8a68M/KJtLJwDW6lMxBp7jhdpyLT47hYuSue4nhvfRWfZ4lzrOOe10pbOjsl7WeI4OI3AtN436HkeRUd1DwrTNhDo3RO+IZeB2sszDWF7S0+8wmN3UfrkV043bls0P2rhUaoxInRPGkLkjqEBUSEwlxzXc9ExwzARIy2iaLnJKZXGuzVyTGPJZaqoHs95p6r1eHxXNZRxvFiArmdjPLCXp5DZC9C/u5FyCFfnEfHXpwuU7FDzTjSAkdJyUm7sAuXSclw0EqVFTpkjgEqVSQd4Hr9E4GgJI5+8OqcFeIYxTE4pK0i/wDi38rXXpFGxx4fADLyVL2zw4Q4nDU2syXuOO3FYgeoPyWpp3tFvEWXHyz8vbr4r+CXQttG7LVwuUpktZx0cbdOSZjqBmzmMuozCZp5PatdHofeb4Jz3qQrO6uqua44QbXCrKRl2nizvk7mCEU5LrMf3Xt0J3/4Uprc7juP3B0ct/8Aa7Yf6zSLHQyM+7dxN/C7NM1cQOb4+F2zgpVROR7wcw/ib3h6KIZnPy4w9vSzgpyk6ipb3VVJYG4YXeJsB5XKl0tWXe/fwaDf+UWVhDRDcA/P5qWymAGwTw47PYz5JfSATcWI4W/h3Kiy4dG7iPCNA3z2VlLTE6ZDeQ6/6Rsq+teWANYLuOTW+P4nJ5a+yx39KRlO1lUeG1gRl47qdicbGTNczI3zA57qDWERvY3/AC7yyybuccg31+iqf7RdK/i1AOXMknNc19Sx0z3qtwyo4i23MKkFOG1dSBp3JPNwIP8AKrXBo+FvE/YcR8llIe1NN7apkklawmQNDTcktY3UW1zLvRacct9suSyemhLgEy6MuVPH2woifvHH/Q9aOkroXMDw6wOhcC36rbTHZhlBzXFRTtAU6oqQBkqiolLtEU5UCp8Ew2FxVnFRk6qbHThqnStqP9jchX9whGh5LPgKcibzUtxACjPctGaTGQF06oCiBpXQYgjheSumRG4PmiGQJ8PvmnAZx7DI6mMxSaOza7drhoQeqxr4Z4T7GU+DX7OA0PVbyTvM+Y6hV75WvbwSC/juPEKeXimf/V8XJcL/ABn6TiOTjmNHaX8eqs4mXIdo7nsf0KR9F+Hvj0cFFmmLcs+mhXHcbh265lM+l4JmPAEgs7np6FM1UhYLEhzduLI/xaLPyV7ibAKRTzm+4/dGYPkVfz7R8OlnFV/vEDk7MeR/5Uymha7vZKtisdhf8tj8ipzJ42Cw1OpWmHJ+2WfH+k9oA0HoCm5pQMzYeJIVVNXgfGB5lVc+LMHx3P7tr+uqd54U4LV1LUud7v8AG7IDoN1WVVWyIGxDnn3nnb+uSqXV7ySI2nPck3PUlLT4S+Q3kO4IaMgsrzW9dtpwyd9KmohfO7hZcNvck7k7nxy0V7hOABljbTS/zJU+SSGmbxSOa0DoPQLE9o+3jn3ipu605GQ6noEYcdvZZ8snSb287TNiYaaA3effcPhC8odqrQg8Umd+65xJNzlYkowjC31DwyJt+bj7rRzJXXjJjHJlblUWgcA65XoY7QQuouG44mtLbfRPYf2LpWACQGV25JLW+TRt1Ttb2Bp5GH2fFE62R4i5t/EHbojyPxsZ/sDi73SGme4lpBfHfPhI1b0XokNLZeW9i6R0eIsY4WcwyNcOVmkL1aoqA1K9nj06kACrqiovkEr5i7IJ+notyp7PpX2chXn7MEI1RtNaCVIjpl2HAJHVHJUk6GgJqV4TZcSnY4OaYMRwFxyTtS+3dHmpTrMYTucgq0JyaTam0R7pHLNQa9mdx5qXTiyjVbrG+30TvQimnlcDdpsVyzHjpIwP8d0VLc8t1UVDVla1kXzcRpXbFngVIjkgObXt9bLGvKjPeosxv0veU+27a4Xu1w9QmpoHHRzf4mrBPeeZXAe78R9Sl8eJ/JlG3dhgPvPYB1C59hSx+9IzyzWKIO5PqVw5qU48J9C8uX7a+o7R0kXutc8+AsPVZ3FO3Ezrtia2Mc9XKpqcgq2RaSSdRnlbezNdUvkPFI5zjzJJUMp+VRnlaMq0n2d0LZq3vgFjWOc8GxBzAAI6/RemYrSRMYfZNawDOzQGj5Lw2lxCWFxdE8sJFiRuOSkSY/VOBDpnkHXNV9E9UbOxjeN72tHiQFVT9uYg8NbmwHvO5gbDqvM5JXu95xPUkqbguFuqJAwGw+Jx2HhzKnWl+W2t7NVJqK2etLQ0HutAAGoAGm4aB6rXNbxlRMPwgRMDGCwHzO5PipcYLFN91U9RYU1IAnHyAKEcSsoU9ddAWv7UhUXtkqWxprbly7bTG6kBoASmZUk4wAJmqrA0XUeeqAF3ZLM1dXI6S9u5fRRyckxacfFcmrq5rsZ4i6aiTlQP8OMj8ITMa2Y3tYQBM4hDbPYruFyk+8LFUlmZ47aKqrYMrjXktFiFIWnwO6qKiNY2Nccmff4pqSEHQqyqaa/VV0kLhsVGmuzDqdc+z5JwvKafIUycuHNR5XBOPcSmXtQlFmzKgzqxlYq6oyTiUGVRZCnamUBQ/aLSIp1kJKkRUJOpAUdkpTjagpk7r6cMbkbpvDcRdE4Fp8lxVS3ChApaPb2Lsv2mZM3hcQHKzq6kLxSiqnMcHNNiFvMIxhszQHus7TNRZpeN2upCXHJdCkKmUMA8CFMe8N1S0pU/s7kKf+1tQj0PbRvlump5gxpc45BD3hreI7LO1NTJI+7smg5N/VTyckxi+Piud/iS2czG593ZSBT2yPkmYnNA7luiZGI8R4RqcvFce9uzx1NNFTO4obDVht5bJuJycwWmLAeI34tQlq6bhd4HRejx78Zt5vJryukmIKVEFAiJUlj1ozqVI0OFiqerwzlmFZtJTrWo1spdMjNRkKHJTELY1cYI0zVNM9o1Ci4LmShfTA7fJR30Q1sFdS1UXMDrkoFRVRf5jf4gp0ryU1RENgPRRJI7KXW4tTt1kb5Z/RZ3EO0rPgaT4nuhLQ8j9UVncQrWg2GZTFbiMkmpsOQyUDgVSJuQc8uNylaEcKVoVE6QlsgIDiY5KOnJXXK4CCKFIikI0KjBdtcg17Q9oZo9HX6q1i7XPOTxdZEOXTXJeMXK2X95W8ihZDjQp8D8q9jqsTdI6+gGjefVMPrWuGWt8xyVb7Qg+G6fjFjf+ivNuVy7enjjMenXE+44STc2stVhOGcI43DvH1Ci4RQNb/iOBudByV8yddXDw691y8/Nv8YkxNS1LQW5+q4jddSmMXVHJVPHIWHPMc1NjlBS1NNbNouN2/oosYafdPVpyI8lUSsGuC6MijNYugxUWiSlVVbDfNW/AuXRo0TEV8F1mq+kXo2J4cDm30WXrsPdyWdmlRg6umVdJAtdWUDvwlU1RRHkfRI9KN8aYc1WstG78J9Cor6N/wCEp7JBsu423VnBgcjs3d0c3ZegXc7IYRa/tHctvNGz0q3j/wCpiaTYJamqLjy8BkB0UdMgEqEIIIQhAdNcnA5MpQUGduhN8SEB7XDSAWvmefMKxwrCQT7R47t7tb9DZR8AonFvFL7rTZredtCN7LQPk5Li4eL7ru5ub6jp55JqFrtxbX0vknImXUpka6tOTYifbVPCoUSd1v05Jr2l09jSe6a6rayPiN9Ds4ZFOByejIS7Co/tGSI2f3hzFgbdNFPp8Wifo+x5HI+iXEKJsjbaHYrEYrTvbcDJ3joUvK4n4yvQmuvo4FBa7mvJzjNRGQA7K1yLn6pR2+nZk5pPiCD8slc5E3B6oYCdSo1Rh7CNbFedN+0nm0+n6Fdf9TW/h/8AFyflC8f61VVQkbX8Rmq6Wk8FRSfakfhYP4VT4l9oksugt0s355pX+G1E9KB71gPILP1+IQR3sS4+H6rKVmOyyan5kqtklcdSSloWxb4jjbnXA7o5DX1VM+QlJZLZUm3bkBdAIShBCyLJUIMiCgpEAIQhBC6EIQHulJ2pa8fdObbYEED6dFYQ4tHa5D2jTNt872tkSs2cLY4cUbi27g4xgkAEnMttpfW2hTr6z2dw+1tL5gjmHt263XB82T0vgxrUx41T2v7QDrcKQcSj2kb/ABALCSvZIb2IcMgRkdzYka6nXI6phznMIDgSzUvHw9RqLG3kVX+Rf0m/+bH9vQHPD8g4HoQVw1j2vFxdpFidweY5jnyWXpqNjrGw5B2+uWfXRWkBIfm6xDbBgyBAv3hzcbqpz77jPLg11WlbGCEy4WNllm4oc28bxI3MjQuGXwjcAjrsq2fHqjiu15c3W1mutY6i4vbmPporvNJ9FODK9NpJIVBrIBILOCo6XHpHgjLjbmQQDccxbVduxuUZGNnW7gPXP1S+bGj4M1TimDkS2GnBrra5yuOWRWfxHB5AcgCPBbep7QBgc6SK4DcwDfTPca5n0VV/bNPM0PYHi/wkNuPmiZz6F48vuPPqqkcNWkeRUF7AttU4xADY8bTuCx3+11CkrKd3xt8wR9QtJkzuDIloSWC0zmQnR0d/AtXDqQbBvlZV5p8GaLUcB5K9mgPJV8sZTmRXHSCWpAn3RlccCpOjaWy64EBqCcpCu+FJZAcIXXCjhQHKEvCiyCCRLZCDeyx6yeX0UDHPvnfli/nchC8udvXvSNh2g8v91fu3/KfoUqEr2c6Jh/3Z/KfoFPr/AHo/zH+UoQrjOq/Ffeb/AFsqup+9b+d/0QhK9LxR2fes/wC6/wCoVvJ7rv6+FyEJU4jy/dD8n/qs/W/fxdZP5HIQqwZ5oOJb+f8Assy/VKhdXF05ebswUkWqELWsYtafQJyoSoU/aqhP0TQQhWiuClKEJk4QEiExSFCEIIIQhBBCEID/2Q==" alt="Latte">
+                <div class="menu-card-content">
+                    <h3>Latte</h3>
+                    <span>344₺</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Tatlılar -->
+    <div class="menu-section">
+        <h2>🍰 Tatlılar</h2>
+        <div class="menu-grid">
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f" alt="Cheesecake">
+                <div class="menu-card-content">
+                    <h3>Cheesecake</h3>
+                    <span>560₺</span>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c" alt="Brownie">
+                <div class="menu-card-content">
+                    <h3>Brownie</h3>
+                    <span>235₺</span>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeBe688YrjEZqTsng8bHDz9iBsxSRjjQsrDg&s" alt="Tiramisu">
+                <div class="menu-card-content">
+                    <h3>Tiramisu</h3>
+                    <span>450₺</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Café Aroma | Tüm Hakları Saklıdır</p>
+</footer>
+
+</body>
+</html>
